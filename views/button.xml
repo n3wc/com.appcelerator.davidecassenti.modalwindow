@@ -1,0 +1,5 @@
+<Alloy>
+	<Button id="modalwindow_button_default" class="modalwindow-button modalwindow-button-default"></Button>
+	<Button id="modalwindow_button_ok" class="modalwindow-button modalwindow-button-ok"></Button>
+	<Button id="modalwindow_button_cancel" class="modalwindow-button modalwindow-button-cancel"></Button>
+</Alloy>

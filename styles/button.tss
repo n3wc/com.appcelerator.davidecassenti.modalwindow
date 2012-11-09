@@ -1,0 +1,30 @@
+"Button": {
+    backgroundRepeat: false,
+    width: '100dip',
+    height: '35dip',
+    bottom: '5dip',
+    borderRadius: '10dip',
+    backgroundImage: '/com.appcelerator.davidecassenti.modalwindow/button.png'
+},
+"#modalwindow_button_ok": {
+    visible: true
+},
+"#modalwindow_button_cancel": {
+    visible: true
+},
+"#modalwindow_button_default": {
+    visible: true
+},
+".modalwindow-button-ok": {
+    color: '#fff',
+    backgroundColor: '#080'
+},
+".modalwindow-button-cancel": {
+    color: '#fff',
+    backgroundColor: '#800'
+},
+".modalwindow-button-default": {
+    color: '#000',
+    backgroundColor: '#aaa',
+    
+}

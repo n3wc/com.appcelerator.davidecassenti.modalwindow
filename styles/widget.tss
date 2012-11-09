@@ -1,0 +1,71 @@
+"#window": {
+    top: 0,
+    bottom: 0,
+    left: 0,
+    right: 0,
+    backgroundColor: '#55000000'
+},
+".modalwindow-container": {
+	left: '10dip',
+	right: '10dip',
+	height: Ti.UI.SIZE,
+	layout: 'vertical',
+	borderRadius: '10dip',
+	borderColor: 'black',
+	borderWidth: '1dip',
+	backgroundColor: 'transparent'
+},
+".modalwindow-container[platform=mobileweb]": {
+    width: 400,
+    left: 'auto',
+    right: 'auto'
+},
+"#modalwindow_header": {
+    width: Ti.UI.FILL,
+    height: '30dip',
+    backgroundRepeat: true,
+    visible: true
+},
+".header": {
+    backgroundColor: '#aaa'
+},
+"#modalwindow_title": {
+    visible: true
+},
+".title": {
+    color: 'black',
+    left: '5dip',
+    font: {
+        fontSize: 16
+    }
+},
+".close": {
+    width: '30dip',
+    height: '30dip',
+    top: 0,
+    right: 0,
+    image: '/com.appcelerator.davidecassenti.modalwindow/close.png'
+},
+"#modalwindow_body": {
+    top: 0,
+    width: Ti.UI.FILL,
+    height: Ti.UI.SIZE,
+    layout: 'vertical',
+    visible: true
+},
+".body": {
+    backgroundColor: 'white'
+},
+"#modalwindow_message": {
+    width: Ti.UI.FILL,
+    height: Ti.UI.SIZE,
+    top: '10dip',
+    bottom: '10dip',
+    left: '10dip',
+    right: '10dip',
+    textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
+    visible: true
+},
+".message": {
+    color: 'black'
+}

@@ -1,0 +1,14 @@
+{
+	"id": "com.appcelerator.davidecassenti.modalwindow",
+	"name": "Generate modal windows",
+	"description" : "Cross-platform modal windows for mobile",
+	"author": "Davide Cassenti",
+	"version": "1.0",
+	"copyright":"Copyright (c) 2012 by Appcelerator",
+	"license":"Public Domain",
+	"min-alloy-version": "0.1.16",
+	"min-titanium-version":"2.0",
+	"tags":"utility,modal,window",
+	"platforms":"android,ios",
+	"dependencies": {}
+}

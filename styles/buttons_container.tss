@@ -1,0 +1,7 @@
+"#buttons_container": {
+    layout: 'vertical',
+    width: Ti.UI.SIZE,
+    height: Ti.UI.SIZE,
+    bottom: '5dip',
+    visible: true
+}

@@ -1,0 +1,13 @@
+<Alloy>
+	<Window id="window" class="modal-window">
+	    <View class="modalwindow-container">
+    	    <View id="modalwindow_header" class="header">
+    	        <Label id="modalwindow_title" class="title"></Label>
+    	        <ImageView id="modalwindow_close" class="close" />
+    	    </View>
+    	    <View id="modalwindow_body" class="body">
+    	        <Label id="modalwindow_message" class="message"></Label>
+    	    </View>
+    	</View>
+	</Window>
+</Alloy>
