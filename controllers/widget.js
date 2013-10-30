@@ -49,8 +49,41 @@ exports.alert = function(message, callback) {
 
     // open the window ($.window points to the XML element)
     $.window.open();
-}
+};
 
+exports.feedback = function(args, callback) {
+    // only open the new modal if there aren't open ones
+    if(open)
+        return;
+    open = true; // mark the modal as open
+
+    // set title and message
+    $.modalwindow_title.text = args.titleText?args.titleText:"Feedback";
+    $.modalwindow_message.text = args.message?args.message:"";
+    
+	var textArea = Ti.UI.createTextArea({
+	  borderWidth: 2,
+	  borderColor: '#bbb',
+	  borderRadius: 5,
+	  color: '#888',
+	  font: {fontSize:14},
+	  keyboardType: args.keyboardType?args.keyboardType:Ti.UI.KEYBOARD_DEFAULT,
+	  returnKeyType: Ti.UI.RETURNKEY_GO,
+	  textAlign: 'left',
+	  value: '',
+	  width: '90%', 
+	  height : '90dip'
+	});
+    $.modalwindow_body.add(textArea);
+    var padding = Ti.UI.createView({height:'10dip'});
+     $.modalwindow_body.add(padding);
+    // set buttons
+    resetButtons();
+    addButton(BUTTON_TYPE_OK, args.buttonText?args.buttonText:"Ok", callback, textArea.value);
+	
+    // open the window ($.window points to the XML element)
+    $.window.open();
+};
 
 /**
  * confirm
@@ -79,7 +112,7 @@ exports.confirm = function(message, yesCallback, noCallback) {
 
     // open the window ($.window points to the XML element)
     $.window.open();
-}
+};
 
 exports.message = function(title, message, buttons) {
 	// sorry, no more than 4 buttons!
@@ -103,7 +136,7 @@ exports.message = function(title, message, buttons) {
 
     // open the window ($.window points to the XML element)
     $.window.open();
-}
+};
 
 /*** INTERNAL FUNCTIONS ***/
 /**
@@ -115,7 +148,7 @@ exports.message = function(title, message, buttons) {
  * @param function callback The callback to call when clicking button (optional)
  *
  **/
-function addButton(type, title, callback) {
+function addButton(type, title, callback, inputValue) {
 	type = type.toLowerCase() || BUTTON_TYPE_DEFAULT;
 	title = title || "Ok";
 
@@ -131,7 +164,7 @@ function addButton(type, title, callback) {
                 var dontClose = false;
                 if(callback) {
                     // if the callback returns 'false', don't auto-close the modal
-                    if(callback(e) == false)
+                    if(callback(e,inputValue) == false)
                         dontClose = true;
                 }
 
